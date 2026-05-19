@@ -1,48 +1,75 @@
-# Coral NPU
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# coralnpu
 
-Coral NPU is a hardware accelerator for ML inferencing. Coral NPU is an Open Source IP designed by Google Research and is freely available for integration into ultra-low-power System-on-Chips (SoCs) targeting wearable devices such as hearables, augmented reality (AR) glasses and smart watches.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/coralnpu)
 
-Coral NPU is a neural processing unit (NPU), also known as an AI accelerator or deep-learning processor. Coral NPU is based on the 32-bit RISC-V Instruction Set Architecture (ISA).
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Coral NPU includes three distinct processor components that work together: matrix, vector (SIMD), and scalar.
+## Architecture
 
-![Coral NPU Archicture](doc/images/arch_data_flow.png)
-[Coral NPU Architecture Datasheet](https://developers.google.com/coral/guides/hardware/datasheet)
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-## Coral NPU Features
-Coral NPU offers the following top-level feature set:
+## Install
 
-* RV32IMF_Zve32x RISC-V instruction set (specifically `rv32imf_zve32x_zicsr_zifencei_zbb`)
-* 32-bit address space for applications and operating system kernels
-* Four-stage processor, in-order dispatch, out-of-order retire
-* Four-way scalar, two-way vector dispatch
-* 128-bit SIMD, 256-bit (future) pipeline
-* 8 KB ITCM memory (tightly-coupled memory for instructions)
-* 32 KB DTCM memory (tightly-coupled memory for data)
-* Both memories are single-cycle-latency SRAM, more efficient than cache memory
-* AXI4 bus interfaces, functioning as both manager and subordinate, to interact with external memory and allow external CPUs to configure Coral NPU
-
-## System Requirements
-
-* Bazel 7.4.1
-* Python 3.9-3.12 (3.13 support is in progress)
-* [SRecord](https://srecord.sourceforge.net/)
-
-## Quick Start
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
 ```bash
-# Ensure that test suite passes
-bazel run //tests/cocotb:core_mini_axi_sim_cocotb
-
-# Build a binary
-bazel build //examples:coralnpu_v2_hello_world_add_floats
-
-# Build the Simulator (non-RVV for shorter build time):
-bazel build //tests/verilator_sim:core_mini_axi_sim
-
-# Run the binary on the simulator:
-bazel-bin/tests/verilator_sim/core_mini_axi_sim --binary bazel-out/k8-fastbuild-ST-dd8dc713f32d/bin/examples/coralnpu_v2_hello_world_add_floats.elf
+git clone https://github.com/Interested-Deving-1896/coralnpu.git
+cd coralnpu
 ```
 
+## Usage
 
-![](doc/images/Coral_Logo_200px-2x.png)
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/coralnpu`](https://github.com/Interested-Deving-1896/coralnpu) and mirrored through:
+
+```
+Interested-Deving-1896/coralnpu  ──►  OpenOS-Project-OSP/coralnpu  ──►  OpenOS-Project-Ecosystem-OOC/coralnpu
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+[Apache-2.0](https://github.com/Interested-Deving-1896/coralnpu/blob/main/LICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
